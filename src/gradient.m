@@ -1,5 +1,5 @@
 close all
-filepath="../test-data/gradient-2.jpeg";
+filepath="../test-data/landscape-test-2.jpeg";
 % flag to determine if intermediate plots should be output
 interm_plots=1;
 % read i the image as an matrix of RGB values
