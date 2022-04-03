@@ -29,18 +29,6 @@ for j=1:px_w
     end
 end
 
-[X,Y]=meshgrid(x,y);
-X=X(:);
-Y=Y(:);
-% get the least squares fit to the red values
-Z=red_values(:);
-I=ones(size(X));
-A=[I X Y];
-b=Z;
-c=A\b;
-z_fit = A*c;
-ls_fit_red = reshape(z_fit,[px_h,px_w]);
-Z=green_values(:)
-b=Z;
-
-
+ls_fit_red = least_square_fit(red_values(:),x,y,px_h,px_w);
+ls_fit_green = least_square_fit(green_values(:),x,y,px_h,px_w);
+ls_fit_blue= least_square_fit(blue_values(:),x,y,px_h,px_w);
