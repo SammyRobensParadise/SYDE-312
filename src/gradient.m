@@ -45,13 +45,21 @@ end
 
 if interm_plots
     figure
-    mesh(red_values)
-    hold on
-    mesh(green_values)
-    mesh(blue_values)
-    title("R,G,B Channel Surfaces")
-    legend("Red Channel","Green Channel","Blue Channel")
-    hold off
+    subplot(3,1,1)
+    colormap autumn
+    mesh(red_values,"FaceColor","r")
+    title("R Channel Surface")
+    legend("Red Channel")
+    subplot(3,1,2)
+    colormap cool
+    mesh(green_values,"FaceColor","g")
+    title("G Channel Surface")
+    legend("Green Channel")
+    subplot(3,1,3)
+    colormap parula
+    mesh(blue_values,"FaceColor","b")
+    title("Blue Channel Surface")
+    legend("Blue Channel")
 end
 
 ls_fit_red = least_square_fit(red_values(:),x,y,px_h,px_w);
