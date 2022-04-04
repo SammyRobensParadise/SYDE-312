@@ -1,5 +1,5 @@
 close all
-filepath="../test-data/living-room.jpeg";
+filepath="../test-data/color_test.jpeg";
 % flag to determine if intermediate plots should be output
 interm_plots=1;
 % read i the image as an matrix of RGB values
@@ -76,6 +76,7 @@ if interm_plots
     legend("Red Channel","Green Channel","Blue Channel")
     hold off
 end
+
 
 % get the maximum pixel values for the RGB Channels
 max_r=get_max_pixel_value(ls_fit_red);
