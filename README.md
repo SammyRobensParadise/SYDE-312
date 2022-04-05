@@ -10,3 +10,7 @@
 ## Course:
 
 - Systems Design Engineering 312 Applied Linear Algebra
+
+## Report
+
+[Read the Report](/report/report.pdf)
